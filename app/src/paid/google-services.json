@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1023258726525",
+    "firebase_url": "https://crypton-a84d6.firebaseio.com",
+    "project_id": "crypton-a84d6",
+    "storage_bucket": "crypton-a84d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023258726525:android:4b26bb6fae701936",
+        "android_client_info": {
+          "package_name": "com.example.bios.crypton.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023258726525-mnjrrlvr4kg8d25cuhb0i9q0gc6fkdv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8Lbn184F5pDuUuJ3DtlXCFrNTlCT4Kus"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

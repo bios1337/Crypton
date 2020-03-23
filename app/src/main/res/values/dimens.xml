@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="logo_w_h">100dp</dimen>
+
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_press_translation_z">6dp</dimen>
+
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <dimen name="card_view_margin">4dp</dimen>
+    <dimen name="bottom_navigation_elevation">8dp</dimen>
+    <dimen name="progress_bar_height">45dp</dimen>
+    <dimen name="progress_bar_width">45dp</dimen>
+    <dimen name="progress_bar_rp_width">30dp</dimen>
+    <dimen name="progress_bar_rp_height">30dp</dimen>
+    <dimen name="progress_bar_margin_bottom">10dp</dimen>
+    <dimen name="forgot_password_text_size">20sp</dimen>
+    <dimen name="registered_email_text_body_size">14sp</dimen>
+    <dimen name="sign_in_signup_text_size">15sp</dimen>
+    <dimen name="widget_coin_image_size">64dp</dimen>
+    <dimen name="widget_size">100dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+
+</resources>

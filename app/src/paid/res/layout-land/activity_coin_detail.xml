@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.bios.crypton.CoinDetailActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/coin_image_view"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:contentDescription="@string/detail_coin_image" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="20dp"
+                        android:padding="4dp"
+                        android:text="@string/card_view_pricing_text" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:labelFor="@id/coin_btc_value"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/btc_value" />
+
+                        <TextView
+                            android:id="@+id/coin_btc_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:labelFor="@id/coin_usd_value"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/usd_value" />
+
+                        <TextView
+                            android:id="@+id/coin_usd_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:labelFor="@id/coin_eur_value"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="4dp"
+                            android:text="@string/eur_value" />
+
+                        <TextView
+                            android:id="@+id/coin_eur_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingBottom="4dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:padding="4dp"
+                    android:text="@string/coin_overview" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_name"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_name" />
+
+                    <TextView
+                        android:id="@+id/coin_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_symbol"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_symbol" />
+
+                    <TextView
+                        android:id="@+id/coin_symbol"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_coinname"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_coinname" />
+
+                    <TextView
+                        android:id="@+id/coin_coinname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_fullname"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_fullname" />
+
+                    <TextView
+                        android:id="@+id/coin_fullname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_algorithm"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_algorithm" />
+
+                    <TextView
+                        android:id="@+id/coin_algorithm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_prooftype"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_prooftype" />
+
+                    <TextView
+                        android:id="@+id/coin_prooftype"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_fullpremined"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_fullpremined" />
+
+                    <TextView
+                        android:id="@+id/coin_fullpremined"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_total_supply"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_total_supply" />
+
+                    <TextView
+                        android:id="@+id/coin_total_supply"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_premined_value"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_premined_value_value" />
+
+                    <TextView
+                        android:id="@+id/coin_premined_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_total_free_float"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_total_free_float" />
+
+                    <TextView
+                        android:id="@+id/coin_total_free_float"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:labelFor="@+id/coin_istrading"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/coin_istrading" />
+
+                    <TextView
+                        android:id="@+id/coin_istrading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light"
+                    android:elevation="@dimen/card_elevation"
+                    android:onClick="openMoreInfo"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/coin_moreinfo"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="42dp"
+        android:contentDescription="@string/action_fav"
+        android:elevation="@dimen/fab_elevation"
+        android:onClick="addTofavorite"
+        android:src="@drawable/ic_favorite"
+        app:layout_anchor="@id/scroll_view"
+        app:layout_anchorGravity="bottom|right|end"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z" />
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+

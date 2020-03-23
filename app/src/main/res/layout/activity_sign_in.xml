@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorPrimary"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+
+        <ImageView
+            android:layout_width="@dimen/logo_w_h"
+            android:layout_height="@dimen/logo_w_h"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/app_logo"
+            android:src="@drawable/ic_euro" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:nextFocusDown="@id/password"
+                android:nextFocusForward="@id/password"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:nextFocusDown="@id/btn_login"
+                android:nextFocusForward="@id/btn_login"
+                android:nextFocusUp="@id/email"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@color/colorAccent"
+            android:contentDescription="@string/log_in"
+            android:nextFocusDown="@id/btn_reset_password"
+            android:nextFocusForward="@id/btn_reset_password"
+            android:nextFocusUp="@id/password"
+            android:onClick="performSignIn"
+            android:text="@string/btn_login"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_reset_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:contentDescription="@string/change_password"
+            android:nextFocusDown="@id/btn_signup"
+            android:nextFocusForward="@id/btn_signup"
+            android:nextFocusUp="@id/btn_login"
+            android:onClick="performResetPassword"
+            android:text="@string/btn_forgot_password"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+
+        <!-- Link to Login Screen -->
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@null"
+            android:contentDescription="@string/sign_up"
+            android:nextFocusDown="@id/email"
+            android:nextFocusForward="@id/email"
+            android:nextFocusUp="@id/btn_reset_password"
+            android:onClick="openSignUpActivity"
+            android:text="@string/btn_link_to_register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sign_in_signup_text_size" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progress_bar_rp_width"
+        android:layout_height="@dimen/progress_bar_rp_width"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="20dp"
+        android:visibility="gone" />
+
+</android.support.design.widget.CoordinatorLayout>

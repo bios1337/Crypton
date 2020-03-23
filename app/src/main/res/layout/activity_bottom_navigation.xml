@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottomNavigationActivity">
+
+    <com.example.bios.crypton.viewpager.BottomNavigationViewPager
+        android:id="@+id/viewpager_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/bottom_navigation_pager" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progress_bar_width"
+        android:layout_height="@dimen/progress_bar_height"
+        android:layout_gravity="center"
+        android:contentDescription="@string/progress_bar"
+        android:visibility="gone" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorPrimary"
+        android:contentDescription="@string/bottom_navigation_bar"
+        android:elevation="@dimen/bottom_navigation_elevation"
+        android:foreground="?attr/selectableItemBackground"
+        app:elevation="@dimen/bottom_navigation_elevation"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/navigation" />
+
+    <include layout="@layout/toolbar_navigation" />
+
+
+</android.support.design.widget.CoordinatorLayout>
